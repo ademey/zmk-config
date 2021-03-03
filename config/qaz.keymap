@@ -24,7 +24,9 @@
             bindings = <&kp>, <&kp>;
         };
     };
-    
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         combo_tab {
@@ -55,6 +57,7 @@
             layers = <-1>;
         };
     };
+
 };
 
 / {
