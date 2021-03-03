@@ -55,9 +55,7 @@
             layers = <-1>;
         };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
