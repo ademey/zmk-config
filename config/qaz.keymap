@@ -54,6 +54,12 @@
             key-positions = <7 8>;
             bindings = <&kp DEL>;
         };
+        
+        combo_fslh {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp FSLH>;
+        };
     };
 };
 
@@ -67,7 +73,7 @@
     &kp Q      &kp W      &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O      &kp P
     &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G  &kp H  &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI RET
     &kp Z      &kp X      &kp C       &kp V       &kp B  &kp N  &kp M       &kp COMMA   &kp DOT
-    &none      &kp LGUI   &kp LCTRL   &lt LOWER SPACE   &lt RAISE SPACE    &mo NAV      &kp FSLH   &none
+    &none      &kp LGUI   &kp LCTRL   &lt LOWER SPACE   &lt RAISE SPACE    &mo NAV      &mo FN   &none
             >;
         };
         
@@ -96,6 +102,16 @@
     &kp C_PREV &kp C_PP     &kp C_NEXT     &trans      &none   &none    &kp LEFT    &kp DOWN   &kp RIGHT &kp PG_DN
     &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL   &bt BT_NXT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR
     &none      &none      &none         &trans        &trans                  &none      &to DEFAULT    &none
+            >;
+        };
+    };
+    
+    fn {
+            bindings = <
+    &kp F1     &kp F2     &kp F3   &kp F4        &kp F5  &kp F6    &kp F7     &kp F8    &kp F9    &kp F10
+    &trans     &none      &none    &none         &none   &none     &none      &none     &bt BT_PRV    &bt BT_NXT 
+    &out OUT_USB  &out OUT_BLE &none &none       &bt BT_SEL 3  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR
+    &none      &reset     &bootloader      &trans        &trans              &trans       &trans     &none
             >;
         };
     };
